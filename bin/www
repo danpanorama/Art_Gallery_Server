@@ -8,6 +8,7 @@ var app = require('../app');
 var debug = require('debug')('server-mario:server');
 var https = require('https');
 
+console.log("port:"+port)
 /**
  * Get port from environment and store in Express.
  */
