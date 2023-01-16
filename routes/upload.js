@@ -9,6 +9,12 @@ const getalldata = require('./../controller/getall');
 const delwork = require('../controller/deletework');
 const resize = require('../controller/resize')
 
+const ChangeNage = require('../controller/changeName')
+
+const changeDate = require('../controller/changeDate')
+const changeSize = require('../controller/changeSize')
+
+
 const fs = require('fs')
 
 const storage = multer.diskStorage({
@@ -87,6 +93,20 @@ router.get("/show",getalldata.getdata, function (req, res, next) {
 });
 
 
+
+router.post("/changename",ChangeNage.changeName, function (req, res, next) {
+ 
+  
+});
+
+router.post("/changedate",changeDate.changeDate, function (req, res, next) {
+ 
+  
+});
+router.post("/changesize",changeSize.changeSize, function (req, res, next) {
+ 
+  
+});
 
 
 module.exports = router;

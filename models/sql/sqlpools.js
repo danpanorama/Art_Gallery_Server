@@ -48,7 +48,34 @@ const getbynameandpath = (name,path) => {
 };
 
 
- 
+const changeName = (name,id) => {
+  return pool.execute(
+    `UPDATE works 
+    SET name = ?
+   
+    WHERE number = ? `,
+    [name,id]
+  );
+};
+
+const changeDate = (date,id) => {
+  return pool.execute(
+    `UPDATE works 
+    SET date = ?
+   
+    WHERE number = ? `,
+    [date,id]
+  );
+};
+const changeSize = (size,id) => {
+  return pool.execute(
+    `UPDATE works 
+    SET size = ?
+   
+    WHERE number = ? `,
+    [size,id]
+  );
+};
 
 const insertimage = 
 (name,path, category,  date ,size  ) => {
@@ -96,4 +123,9 @@ module.exports.insertimage = insertimage;
 
 module.exports.getbycat = getbycat;
 module.exports.deletework = deletework;
+
+
+module.exports.changeName = changeName;
+module.exports.changeSize = changeSize;
+module.exports.changeDate = changeDate;
 
