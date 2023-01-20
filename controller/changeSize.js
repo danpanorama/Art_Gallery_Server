@@ -4,7 +4,7 @@ const imgs = require('./../models/sql/sqlpools')
 const changeSize = async (req, res, next) => {
    try {
     
-      let changeSizeS = await imgs.changeSize(req.body.size,req.body.number);
+      let changeSizeS = await imgs.changeSizeSQL(req.body.size,req.body.number);
 
 
    res.json({msg:{msg:'seccest', type:'good'}})

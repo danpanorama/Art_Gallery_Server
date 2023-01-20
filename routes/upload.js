@@ -10,7 +10,6 @@ const delwork = require('../controller/deletework');
 const resize = require('../controller/resize')
 
 const ChangeNage = require('../controller/changeName')
-
 const changeDate = require('../controller/changeDate')
 const changeSize = require('../controller/changeSize')
 
@@ -57,7 +56,7 @@ router.get("/dash", function (req, res, next) {
  
 });
 
-router.post("/",upload.single('file'),resize.resize,adddata.add, function (req, res, next) {
+router.post("/",upload.single('file'),adddata.add, function (req, res, next) {
 
 
   

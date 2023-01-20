@@ -48,7 +48,7 @@ const getbynameandpath = (name,path) => {
 };
 
 
-const changeName = (name,id) => {
+const changeNameSQL = (name,id) => {
   return pool.execute(
     `UPDATE works 
     SET name = ?
@@ -58,7 +58,7 @@ const changeName = (name,id) => {
   );
 };
 
-const changeDate = (date,id) => {
+const changeDateSQL = (date,id) => {
   return pool.execute(
     `UPDATE works 
     SET date = ?
@@ -67,7 +67,7 @@ const changeDate = (date,id) => {
     [date,id]
   );
 };
-const changeSize = (size,id) => {
+const changeSizeSQL = (size,id) => {
   return pool.execute(
     `UPDATE works 
     SET size = ?
@@ -125,7 +125,7 @@ module.exports.getbycat = getbycat;
 module.exports.deletework = deletework;
 
 
-module.exports.changeName = changeName;
-module.exports.changeSize = changeSize;
-module.exports.changeDate = changeDate;
+module.exports.changeNameSQL = changeNameSQL;
+module.exports.changeSizeSQL = changeSizeSQL;
+module.exports.changeDateSQL = changeDateSQL;
 
